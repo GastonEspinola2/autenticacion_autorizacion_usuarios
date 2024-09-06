@@ -5,14 +5,14 @@
     })
 
     console.log({ response })
-
-
     if (response.ok) {
         const data = await response.json();
+        console.log(data.user);
         document.getElementById('user-name').innerText = data.user.username;
     } else {
         // Redirigir al usuario a la página de inicio de sesión
-        window.location.href = 'index.html';
+        console.log(response);
+        // window.location.href = 'index.html';
     }
 })();
 
